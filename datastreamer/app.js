@@ -4,7 +4,7 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 8000;
 
-var keys = require('./keys.json'); //load account keys from json file
+var keys = require('./keys.json'); //load account keys from json file ask Mikko or Valtteri for details if you need this
 
 server.listen(port);
 
