@@ -44,7 +44,7 @@ io.on('connection', function(socket) {
         RowKey: {'_': now.getTime() + ''}
       }
       for (key in data.data) {
-        entity[key] = {'_': data.data[key]};
+        entity[key + ""] = {'_': data.data[key]};
       }
       if(!tableStorage.batch) tableStorage.batch = new azure.TableBatch();
       if(tableStorage.batch.size() < 100) tableStorage.batch.insertOrReplaceEntity(entity);

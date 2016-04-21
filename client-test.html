@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>EHD Client Test</title>
+</head>
+<body>
+  <div id='log'></div>
+  <script src="http://ehd2016.azurewebsites.net/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io('http://ehd2016.azurewebsites.net');
+      socket.on('connection', function() {
+          socket.emit('subscribe', 'muse');
+      })
+      socket.on('data', function (data) {
+          if(data.room === 'muse') {
+              console.log(data);
+              document.getElementById('log').innerHTML = JSON.stringify(data);
+          }
+      });
+  </script>
+</body>
