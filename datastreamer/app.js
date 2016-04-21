@@ -83,6 +83,8 @@ io.on('connection', function(socket) {
             */
           }
           else {
+            tableStorage.busy = false;
+            tableStorage.batch = undefined;
             console.log(error);
           }
         });
