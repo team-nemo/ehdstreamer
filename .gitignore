@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
 /datastreamer/keys.json
-/museosc/secret.txt
+secret.txt
