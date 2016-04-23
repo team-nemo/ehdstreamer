@@ -8,10 +8,10 @@
   <script>
       var socket = io('http://ehd2016.azurewebsites.net');
       socket.on('connection', function() {
-          socket.emit('subscribe', 'muse');
+          socket.emit('subscribe', 'heartrate');
       })
       socket.on('data', function (data) {
-          if(data.room === 'muse') {
+          if(data.room === 'heartrate') {
               console.log(data);
               document.getElementById('log').innerHTML = JSON.stringify(data);
           }

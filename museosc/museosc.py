@@ -10,7 +10,7 @@ f.close()
 def send(path, tags, args, source):
     print(path, args)
     toSend = {
-        'room': 'muse',
+        'room': 'muse0',
         'id': path,
         'data': args,
         'secret': secret,
